@@ -31,8 +31,8 @@ Z   = mainArray(19);%Perpendicular distance from X axes to aircraft center of gr
 
 %Raymer Variables
 S_Fus=mainArray(20);%Fuselage Wetted area in ft^2
-n_z = mainArray(21); 
-W_O = mainArray(22);
+n_z = mainArray(21);%Maximum wing loading (6G) 
+W_O = mainArray(22);%Total gross weight (240 kg = 529.109 lbs)
 l_HT= mainArray(23);%Length of Horizontal Tail weight
 l_Fus=mainArray(24);%Fuselage structure length (Bulkhead to aft) (ft)
 d_Fus=mainArray(25);%Fuselage structure depth (ft)
