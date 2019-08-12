@@ -31,8 +31,14 @@ Z   = mainArray(19);%Perpendicular distance from X axes to aircraft center of gr
 
 %Raymer Variables
 S_Fus=mainArray(20);%Fuselage Wetted area in ft^2
+S_n = pi*R*(R^2 + l_n^2)^.5; %Noseone Wetted Area
+S_c = 2*pi*R*l_c;
+S_t = pi*R*(R^2 + l_t^2)^.5;
+W_n = S_n*W_s/(S_n + S_c + S_t);
+W_c = S_c*W_s/(S_n + S_c + S_t);
+W_t = S_t*W_s/(S_n + S_c + S_t);
 n_z = mainArray(21);%Maximum wing loading (6G) 
-W_O = mainArray(22);%Total gross weight (240 kg = 529.109 lbs)
+W_O = W_n+W_c+W_t;%Total gross weight (240 kg = 529.109 lbs)
 l_HT= mainArray(23);%Length of Horizontal Tail weight
 l_Fus=mainArray(24);%Fuselage structure length (Bulkhead to aft) (ft)
 d_Fus=mainArray(25);%Fuselage structure depth (ft)
